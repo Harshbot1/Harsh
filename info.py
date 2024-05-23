@@ -17,17 +17,17 @@ def is_valid_ip(ip):
     return re.match(ip_pattern, ip) is not None
 
 # Bot information
-API_ID = environ.get('API_ID', '26422668')  #api id of your telegram id
+API_ID = environ.get('API_ID', '')  #api id of your telegram id
 if len(API_ID) == 0:
     print('Error - API_ID is missing, exiting now')
     exit()
 else:
     API_ID = int(API_ID)
-API_HASH = environ.get('API_HASH', '13853df234b2fbe18d9027a5985cc69e') #api hash of your telegram id
+API_HASH = environ.get('API_HASH', '') #api hash of your telegram id
 if len(API_HASH) == 0:
     print('Error - API_HASH is missing, exiting now')
     exit()
-BOT_TOKEN = environ.get('BOT_TOKEN', '6824011469:AAGZSCsohzgjnipFSS-DzGOpUg4_lU7At3Y') #bot token from botfather
+BOT_TOKEN = environ.get('BOT_TOKEN', '') #bot token from botfather
 if len(BOT_TOKEN) == 0:
     print('Error - BOT_TOKEN is missing, exiting now')
     exit()
@@ -45,13 +45,13 @@ else:
     ADMINS = [int(admins) for admins in ADMINS.split()]
 
 # Channels
-INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '1002074243766').split()]
+INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
 if len(INDEX_CHANNELS) == 0:
     print('Info - INDEX_CHANNELS is empty')
-AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '-1001565949579').split()]
+AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '').split()]
 if len(AUTH_CHANNEL) == 0:
     print('Info - AUTH_CHANNEL is empty')
-LOG_CHANNEL = environ.get('LOG_CHANNEL', '1002022000663') #bot log channel -1005293546253
+LOG_CHANNEL = environ.get('LOG_CHANNEL', '') #bot log channel -1005293546253
 if len(LOG_CHANNEL) == 0:
     print('Error - LOG_CHANNEL is missing, exiting now')
     exit()
@@ -60,7 +60,7 @@ else:
 IS_FSUB = is_enabled('IS_FSUB', True)
 
 # support group
-SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '-1002074243766') #support group id ex:  -1002936246860
+SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '') #support group id ex:  -1002936246860
 if len(SUPPORT_GROUP) == 0:
     print('Error - SUPPORT_GROUP is missing, exiting now')
     exit()
@@ -68,11 +68,11 @@ else:
     SUPPORT_GROUP = int(SUPPORT_GROUP)
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://dahif89943:sudipsaha2006@cluster0.iscxsme.mongodb.net/?retryWrites=true&w=majority") #mongo db url
+DATABASE_URL = environ.get('DATABASE_URL', "") #mongo db url
 if len(DATABASE_URL) == 0:
     print('Error - DATABASE_URL is missing, exiting now')
     exit()
-DATABASE_NAME = environ.get('DATABASE_NAME', "dahif89943")
+DATABASE_NAME = environ.get('DATABASE_NAME', "")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 
 # Links
@@ -113,7 +113,7 @@ PAYMENT_QR = environ.get('PAYMENT_QR', 'http://graph.org/file/cacbbea472e5a48ce0
 
 # for stream
 IS_STREAM = is_enabled('IS_STREAM', True) #true if you want stream feature active in your bot
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "10020686013057") #if is_stream = true then add a channel id ex: -10026393639
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "") #if is_stream = true then add a channel id ex: -10026393639
 if len(BIN_CHANNEL) == 0:
     print('Error - BIN_CHANNEL is missing, exiting now')
     exit()
