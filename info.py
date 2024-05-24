@@ -27,7 +27,7 @@ API_HASH = environ.get('API_HASH', '13853df234b2fbe18d9027a5985cc69e') #api hash
 if len(API_HASH) == 0:
     print('Error - API_HASH is missing, exiting now')
     exit()
-BOT_TOKEN = environ.get('BOT_TOKEN', '6592264870:AAEayZB0T7Z5uawhz5i7DaY18Gj8bYnSDWU') #bot token from botfather
+BOT_TOKEN = environ.get('BOT_TOKEN', '7197503629:AAENswC8xqnxB-jVQl2209m9F0lFjLhKmGE') #bot token from botfather
 if len(BOT_TOKEN) == 0:
     print('Error - BOT_TOKEN is missing, exiting now')
     exit()
@@ -45,13 +45,13 @@ else:
     ADMINS = [int(admins) for admins in ADMINS.split()]
 
 # Channels
-INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1002190756735').split()]
+INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1002074223444').split()]
 if len(INDEX_CHANNELS) == 0:
     print('Info - INDEX_CHANNELS is empty')
-AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '-1002197600033').split()]
+AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '-1002055428552').split()]
 if len(AUTH_CHANNEL) == 0:
     print('Info - AUTH_CHANNEL is empty')
-LOG_CHANNEL = environ.get('LOG_CHANNEL', '-1002242338793') #bot log channel -1005293546253
+LOG_CHANNEL = environ.get('LOG_CHANNEL', '-1002054891870') #bot log channel -1005293546253
 if len(LOG_CHANNEL) == 0:
     print('Error - LOG_CHANNEL is missing, exiting now')
     exit()
@@ -60,7 +60,7 @@ else:
 IS_FSUB = is_enabled('IS_FSUB', True)
 
 # support group
-SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '-1002190756735') #support group id ex:  -1002936246860
+SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '-1002074223444') #support group id ex:  -1002936246860
 if len(SUPPORT_GROUP) == 0:
     print('Error - SUPPORT_GROUP is missing, exiting now')
     exit()
@@ -113,7 +113,7 @@ PAYMENT_QR = environ.get('PAYMENT_QR', 'http://graph.org/file/cacbbea472e5a48ce0
 
 # for stream
 IS_STREAM = is_enabled('IS_STREAM', True) #true if you want stream feature active in your bot
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1002190756735") #if is_stream = true then add a channel id ex: -10026393639
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1002040559376") #if is_stream = true then add a channel id ex: -10026393639
 if len(BIN_CHANNEL) == 0:
     print('Error - BIN_CHANNEL is missing, exiting now')
     exit()
